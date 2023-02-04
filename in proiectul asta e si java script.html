@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+     <title>
+        Intro in java script
+     </title>
+    </head>
+
+    <body>
+
+<!--#1-->
+     <p id="ID_Demonstrativ"></p>
+
+     
+        <script>
+            document.getElementById("ID_Demonstrativ").innerHTML="Ana are mere.";
+        </script>
+
+<!--#2-->
+
+<button type="button" onclick="document.getElementById('ID2').innerHTML=Date()">
+Click pt a vedea data si ora
+</button>
+
+<h2 id='ID2'></h2>
+
+<!--#3-->
+
+<button type="button" onclick="Prima_Functie()">
+ Click here for surprise!!! 
+</button>
+
+<p id="Id_ul_functiei">Aici se va schimba ceva dupa surpriza</p>
+
+<script>
+    function Prima_Functie()
+    {
+        document.getElementById("Id_ul_functiei").innerHTML="Boom";
+    }
+</script>
+
+<button type="button" onclick="A_doua_fuctie()">
+Click here for the second surprise!!
+</button>
+
+<h1 id="Al_doilea_id_al_fuctiei">Aici se va schimba ceva...</h1>
+
+<script>
+function A_doua_fuctie()
+{
+    document.getElementById("Al_doilea_id_al_fuctiei").innerHTML="boooooooooooooooooooooooooooooooooooooom"
+}
+
+</script>
+
+
+
+    </body>
+
+
+</html>
