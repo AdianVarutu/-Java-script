@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Implementare java script in html</title>
+</head>
+
+<body>
+
+    <p id="id1"></p>
+<script>
+const nr1Text = prompt("enter number1:")
+const nr1 = parseInt(nr1Text);
+const nr2 = parseInt(prompt("enter number2:"));
+const op = prompt("operation:");
+
+let rezultat;
+
+if (op=="adunare" || op =="+") {
+  //  console.log(nr1+nr2)
+    rezultat=nr1+nr2;
+  document.getElementById("id1").innerHTML=rezultat;
+} else if(op=="scadere" ||op=="-") {
+  // console.log(nr1-nr2);
+   rezultat=nr1-nr2;  
+   document.getElementById("id1").innerHTML=rezultat;
+} else if(op=="imutire" ||op=="*") {
+  //  console.log(nr1*nr2);
+    rezultat=nr1*nr2;
+    document.getElementById("id1").innerHTML=rezultat;
+} else if(op=="impartire" ||op=="/") {
+//    console.log(Math.floor(nr1/nr2) + " rest " + nr1%nr2);
+    rezultat=nr1/nr2;
+    document.getElementById("id1").innerHTML=rezultat;
+} else if(op=="ridicare la putere" ||op=="p") {
+  //  console.log(nr1**nr2);
+    rezultat=nr1**nr2;
+    document.getElementById("id1").innerHTML=rezultat;
+}
+
+</script>
+<h1 id="demo2">Am aici un text</h1>
+
+<button style="color:blue;background-color:aqua;" type="button" onclick="Functia_mea()">
+Click me for surprie
+</button>
+
+<script>
+    function Functia_mea()
+    {
+        document.getElementById("demo").innerHTML="boom";
+        document.getElementById("demo2").style.fontSize=100
+    }
+</script>
+
+</body>
+
+</html>
