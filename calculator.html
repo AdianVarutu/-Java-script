@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            rec
+        </title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            
+
+            // let operator=prompt('operatorul: ');
+
+            // let nr1 = parseFloat(prompt('numarul1: '));
+            // let nr2 = parseFloat(prompt('numarul2: '));
+
+            // let result;
+
+        // using if...else if... else
+        // if (operator == '+') {
+        //     result = number1 + number2;
+        // }
+        // else if (operator == '-') {
+        //     result = number1 - number2;
+        // }
+        // else if (operator == '*') {
+        //     result = number1 * number2;
+        // }
+        // else {
+        //     result = number1 / number2;
+        // }
+
+        // console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+            let nr1;
+            let nr2;
+            let tasta_apasata_stanga = 0;
+            let tasta_apasata_dreapta = 0;
+            let operator;
+            let rezultat;
+            let apasare_tasta=0;
+            let first_sec = false;
+
+            function tasta_plus(){
+                operator = "+";
+                first_sec = true;
+                document.getElementById("oper").innerHTML="+";
+            }
+            function tasta_minus(){
+                operator = "-";
+                first_sec = true;
+                document.getElementById("oper").innerHTML="-";
+            }
+            function tasta_inmultire(){
+                operator = "*";
+                first_sec = true;
+                document.getElementById("oper").innerHTML="*";
+            }
+            function tasta_impartire(){
+                operator = "/";
+                first_sec = true;
+                document.getElementById("oper").innerHTML="/";
+            }
+            // ------acum tastele-----
+
+            let next_nr1;
+            let next_nr2;
+
+            function tasta0()
+            {   next_nr = 0;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=0;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=0;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta1()
+            {   next_nr = 1;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=1;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=1;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta2()
+            {   next_nr = 2;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=2;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=2;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta3()
+            {   next_nr = 3;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=3;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=3;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta4()
+            {   next_nr = 4;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=4;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=4;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta5()
+            {   next_nr = 5;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=5;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=5;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta6()
+            {   next_nr = 6;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=6;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=6;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta7()
+            {   next_nr = 7;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=7;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=7;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta8()
+            {   next_nr = 8;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=8;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=8;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta9()
+            {   next_nr = 9;
+                if(first_sec==false) //pentru tasta de dinaintea operatorului
+                {   
+                    if(tasta_apasata_stanga==0){
+                        nr1=9;
+                    }
+                    else 
+                    {
+                        nr1 = nr1*10 + next_nr;
+                    }
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    tasta_apasata_stanga = tasta_apasata_stanga+1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    if(tasta_apasata_dreapta==0){
+                        nr2=9;
+                    }
+                    else 
+                    {
+                        nr2 = nr2*10 + next_nr;
+                    }
+                    tasta_apasata_dreapta = tasta_apasata_dreapta+1;
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta_egal(){
+                if(operator=="+"){
+                    rezultat = nr1 + nr2;
+                }
+                else if(operator=="-"){
+                    rezultat = nr1 - nr2;
+                }
+                else if(operator=="*"){
+                    rezultat = nr1 * nr2;
+                }
+                else{
+                    rezultat = nr1/nr2;
+                }
+
+                
+                document.getElementById("rez").innerHTML=rezultat;
+            }
+            function tasta_reset(){
+                document.getElementById("prim_nr").innerHTML="Primul numar este: ";
+                document.getElementById("oper").innerHTML="operatorul este: ";
+                document.getElementById("doi_nr").innerHTML="Al doilea numar este: ";
+                document.getElementById("rez").innerHTML="Rezultatul: ";
+                first_sec=false;
+                nr1 = 0;
+                nr2 = 0;
+
+                tasta_apasata_stanga = 0;
+                tasta_apasata_dreapta = 0;
+            }
+
+        </script>
+        
+        <h1 id="prim_nr">Primul numar este: </h1>
+        <h2 id="oper">Operatorul este: </h2>
+        <h1 id="doi_nr">Al doilea numar este: </h1>
+        <h1>=</h1>
+        <h2 id="rez">Rezultatul:</h2>
+
+        <table style="font-size: larger;">
+            <tr>
+                <th><h1 id="rezultat"> </h1></th>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta7()>7</button></td>
+                <td><button type="button" onclick=tasta8()>8</button></td>   
+                <td><button type="button" onclick=tasta9()>9</button></td>  
+                <td><button type="button" onclick=tasta_reset()>CA</button></td>  
+            <tr>
+                <td><button type="button" onclick=tasta4()>4</button></td>
+                <td><button type="button" onclick=tasta5()>5</button></td>
+                <td><button type="button" onclick=tasta6()>6</button></td>
+                <td><button type="button" onclick=tasta_impartire()>/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta1()>1</button></td>
+                <td><button type="button" onclick=tasta2()>2</button></td>
+                <td><button type="button" onclick=tasta3()>3</button></td>
+                <td><button type="button" onclick=tasta_inmultire()>*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta0()>0</button></td>
+                <td><button type="button" onclick=tasta_plus()>+</button></td>
+                <td><button type="button" onclick=tasta_minus()>-</button></td>
+                <td><button type="button" onclick=tasta_egal()>=</button></td>
+            </tr>
+
+        </table>
+    </body>
+</html>
