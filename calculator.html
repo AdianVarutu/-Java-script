@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+https://replit.com/join/rvcaywzonu-mirceamarian
+<html>
+    <head>
+        <title>
+            rec
+        </title>
+    </head>
+    <body>
+        <script>
+            // let operator=prompt('operatorul: ');
+
+            // let nr1 = parseFloat(prompt('numarul1: '));
+            // let nr2 = parseFloat(prompt('numarul2: '));
+
+            // let result;
+
+        // using if...else if... else
+        // if (operator == '+') {
+        //     result = number1 + number2;
+        // }
+        // else if (operator == '-') {
+        //     result = number1 - number2;
+        // }
+        // else if (operator == '*') {
+        //     result = number1 * number2;
+        // }
+        // else {
+        //     result = number1 / number2;
+        // }
+
+        // console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+            let operator;
+
+            //cei 2 operanzi
+            let nr1=0;
+            let nr2=0;
+
+            //stocare rezultat final
+            let rezultat;
+
+            //second_number cand e false suntem situati inaintea operatorului
+            let second_number = false; //este variabila first_sec, am redenumit-o pentru a fi mai clar la ce o folosim (cand e false suntem pe NR1, cand se face true scriem NR2)
+            
+            let apasare_operator=0;
+            //apasare_operator:
+            //---> e 0 daca nu l-am apasat deloc
+            //---> creste cu 1 cand il apasam, si daca se face 2 va muta rezultatul operatiei curente in primul numar, si se va reseta din nou la 1 pentru a fi pregatit de urmatoarea operatie
+
+            //vom crea o functie care ne ajuta sa mutam rezultatul in primul numar atunci cand dorim sa facem mai multe operatii una dupa cealalta
+            function verificare_apasare_operator()
+            {
+                if(apasare_operator==2)
+                {
+                    calculare(); //apelam functia calculare(), este definita langa functia rezultat()
+                    nr1 = rezultat;
+                    nr2 = 0;
+                    operator = " "; //resetam operatorul, pentru a fi pregatit sa punem altceva
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    document.getElementById("oper").innerHTML=operator;
+                    document.getElementById("doi_nr").innerHTML=" ";
+                    apasare_operator=1;
+                }
+            }
+            function tasta_plus(){
+                second_number = true;//cand e true, ne mutam pe al doilea numar
+                apasare_operator = apasare_operator+1;
+                verificare_apasare_operator(); //vom verifica ce valoare are var apasare_operator
+                operator = "+";
+                document.getElementById("oper").innerHTML=operator;
+            }
+            function tasta_minus(){
+                second_number = true;
+                apasare_operator = apasare_operator+1;
+                verificare_apasare_operator();
+                operator = "-";
+                document.getElementById("oper").innerHTML=operator;
+            }
+            function tasta_inmultire(){
+                second_number = true;
+                apasare_operator = apasare_operator+1;
+                verificare_apasare_operator();
+                operator = "*";
+                document.getElementById("oper").innerHTML=operator;
+            }
+            function tasta_impartire(){
+                second_number = true;
+                apasare_operator = apasare_operator+1;
+                verificare_apasare_operator();
+                operator = "/";
+                document.getElementById("oper").innerHTML=operator;
+            }
+            // ------acum tastele-----
+
+            function tasta0()
+            {   next_cifra = 0;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta1()
+            {   next_cifra = 1;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta2()
+            {   
+                next_cifra = 2;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+                    
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta3()
+            {   next_cifra = 3;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta4()
+            {   next_cifra = 4;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta5()
+            {   next_cifra = 5;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+                    
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta6()
+            {   next_cifra = 6;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+                    
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta7()
+            {   next_cifra = 7;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+                    
+                    document.getElementById("prim_nr").innerHTML=nr1;
+
+                }
+                
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta8()
+            {   next_cifra = 8;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+
+                }
+                
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            function tasta9()
+            {   next_cifra = 9;
+                if(second_number==false) //pentru tasta de dinaintea operatorului
+                {   
+                    nr1 = nr1*10 + next_cifra;
+
+                    document.getElementById("prim_nr").innerHTML=nr1;
+
+                }
+
+                //acum pentru tasta de dupa operator (dreapta)
+                else{
+                    nr2 = nr2*10 + next_cifra;
+                    
+                    document.getElementById("doi_nr").innerHTML=nr2;
+                }
+            }
+            //functia calculare face operatia ceruta
+            function calculare()
+            {
+                if(operator=="+"){
+                    rezultat = nr1 + nr2;
+                }
+                else if(operator=="-"){
+                    rezultat = nr1 - nr2;
+                }
+                else if(operator=="*"){
+                    rezultat = nr1 * nr2;
+                }
+                else{
+                    rezultat = nr1/nr2;
+                }
+            }
+
+            function tasta_egal(){
+                calculare(); //se apeleaza funcita calculare
+                document.getElementById("rez").innerHTML=rezultat; //se afiseaza rezultatul
+            }
+
+            function tasta_reset(){
+                document.getElementById("prim_nr").innerHTML=" ";
+                document.getElementById("oper").innerHTML=" ";
+                document.getElementById("doi_nr").innerHTML=" ";
+                document.getElementById("rez").innerHTML=" ";
+                second_number=false;
+                nr1 = 0;
+                nr2 = 0;
+            }
+
+        </script>
+      
+        <!--Afisare operatie printr-un tabel-->
+        <table>
+            <tr>
+                <td>
+                    <h2>
+                        NR1: 
+                    </h2>
+                </td>
+                <td>
+                    <h3 id="prim_nr"> </h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        Operatorul: 
+                    </h2>
+                </td>
+                <td>
+                    <h3 id="oper"> </h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        NR2:  
+                    </h2>
+                </td>
+                <td>
+                    <h3 id="doi_nr"> </h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        Rezultat:   
+                    </h2>
+                </td>
+                <td>
+                    <h2 id="rez"> </h2>
+                </td>
+            </tr>
+        </table>
+        <!--Afisare interfata calculator-->
+        <table style="font-size: larger;">
+            <tr>
+                <td><button type="button" onclick=tasta7()>7</button></td>
+                <td><button type="button" onclick=tasta8()>8</button></td>   
+                <td><button type="button" onclick=tasta9()>9</button></td>  
+                <td><button type="button" onclick=tasta_reset()>CA</button></td>  
+            <tr>
+                <td><button type="button" onclick=tasta4()>4</button></td>
+                <td><button type="button" onclick=tasta5()>5</button></td>
+                <td><button type="button" onclick=tasta6()>6</button></td>
+                <td><button type="button" onclick=tasta_impartire()>/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta1()>1</button></td>
+                <td><button type="button" onclick=tasta2()>2</button></td>
+                <td><button type="button" onclick=tasta3()>3</button></td>
+                <td><button type="button" onclick=tasta_inmultire()>*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta0()>0</button></td>
+                <td><button type="button" onclick=tasta_plus()>+</button></td>
+                <td><button type="button" onclick=tasta_minus()>-</button></td>
+                <td><button type="button" onclick=tasta_egal()>=</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
